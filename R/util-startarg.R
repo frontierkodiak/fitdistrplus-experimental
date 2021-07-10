@@ -53,7 +53,8 @@ start.arg.default <- function(x, distr)
     aux <- m*(1-m)/v - 1
     start <- list(shape1=m*aux, shape2=(1-m)*aux)
   }else if (distr == "weibull") {
-    if (any(x < 0)) 
+    if (any(x < 0))
+      print(x)
       stop("values must be positive to fit an Weibull  distribution")
     m <- mean(log(x))
     v <- var(log(x))

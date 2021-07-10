@@ -30,7 +30,7 @@ mledist <- function (data, distr, start=NULL, fix.arg=NULL, optim.method="defaul
     # data may correspond to a vector for non censored data or to
     # a dataframe of two columns named left and right for censored data 
 {
-    if (!is.character(distr)) 
+    if (!is.character(distr))
         stop("distr must be a character string naming a distribution")
     else 
         distname <- distr
