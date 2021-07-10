@@ -16,7 +16,8 @@ manageparam <- function(start.arg, fix.arg, obs, distname)
   
   if(is.null(start.arg))
   {
-    trystart <- try(start.arg.default(obs, distname), silent = TRUE)
+    print(paste0("util-manageparam obs vector: ", obs))
+    trystart <- try(start.arg.default(obs, distname), silent = FALSE)
     if(class(trystart) == "try-error")
     {
       cat("Error in computing default starting values.\n")
